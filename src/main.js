@@ -29,10 +29,12 @@ if (!app.isPackaged) {
   });
 }
 
+/*
 session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
   details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0';
   callback({ cancel: false, requestHeaders: details.requestHeaders });
 });
+*/
 
 /**
  * Update the menuBarVisbility according to the store value
@@ -89,6 +91,14 @@ function createWindow(options = {}) {
   });
 }
 
+function setUA() {
+  session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
+    details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (X11; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0';
+    callback({ cancel: false, requestHeaders: details.requestHeaders });
+  });
+}
+
+
 function addGlobalShortcuts() {
   Object.keys(mediaKeys).forEach((key) => {
     globalShortcut.register(`${key}`, () => {
@@ -101,6 +111,7 @@ function addGlobalShortcuts() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
+  setUA();
   createWindow();
   addMenu();
   createSettingsWindow();
