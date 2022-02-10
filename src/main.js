@@ -65,6 +65,8 @@ function createWindow(options = {}) {
 
   syncMenuBarWithStore();
 
+  setUA();
+
   // load the Tidal website
   mainWindow.loadURL(tidalUrl);
 
@@ -111,7 +113,6 @@ function addGlobalShortcuts() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
-  setUA();
   createWindow();
   addMenu();
   createSettingsWindow();
