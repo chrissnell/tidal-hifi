@@ -31,7 +31,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "electron": "git+https://github.com/castlabs/electron-releases.git#v18.0.0-alpha.2+wvcus",
+    "electron": "git+https://github.com/castlabs/electron-releases.git#v17.0.0+wvcus",
     "@mastermindzh/prettier-config": "^1.0.0",
     "electron-builder": "^22.14.5",
     "electron-reload": "^1.5.0",
