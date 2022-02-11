@@ -109,7 +109,7 @@ function addGlobalShortcuts() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
-  await components.whenReady();
+  components.whenReady();
   console.log('components ready:', components.status());
   createWindow();
   addMenu();
