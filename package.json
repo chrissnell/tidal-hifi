@@ -23,7 +23,6 @@
   "homepage": "https://github.com/Mastermindzh/tidal-hifi",
   "license": "MIT",
   "dependencies": {
-    "electron": "git+https://github.com/castlabs/electron-releases.git#v18.0.0-alpha.2+wvcus",
     "discord-rpc": "^4.0.1",
     "electron-store": "^8.0.1",
     "express": "^4.17.1",
@@ -32,6 +31,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "electron": "git+https://github.com/castlabs/electron-releases.git#v18.0.0-alpha.2+wvcus",
     "@mastermindzh/prettier-config": "^1.0.0",
     "electron-builder": "^22.14.5",
     "electron-reload": "^1.5.0",
